@@ -25,5 +25,5 @@ x specifies the grade of memory behavior modeling
  
  Preferably stick to All, and if not needed specify in the SEFF the bytesize in the variable action of the corresponding memory hierarchy level to zero.
  
- By problems importing the models, it is maybe because of a newer (or older) Palladio version, we refer to https://sdqweb.ipd.kit.edu/wiki/PCM_4.1
- See section migrating, probably by the time a newer version exists. 
+ If problems occur importing the models, it is maybe because of a newer (or older) Palladio version, we refer to https://sdqweb.ipd.kit.edu/wiki/PCM_4.1
+ See section migrating, probably by the time a newer version will exist. 
