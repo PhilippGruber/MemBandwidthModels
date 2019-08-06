@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allocation:Allocation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" id="_Y21JAEA9EemyNJeBPf32Tg" entityName="defaultAllocation">
+  <targetResourceEnvironment_Allocation href="default.resourceenvironment#/"/>
+  <system_Allocation href="default.system#_1GpfoEA7EemyNJeBPf32Tg"/>
+  <allocationContexts_Allocation id="_ZRwxgEA9EemyNJeBPf32Tg" entityName="Allocation_Assembly_MatrixMultiplicator &lt;MatrixMultiplicator> &lt;MatrixMultiplicator>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_DELxgEA8EemyNJeBPf32Tg"/>
+    <assemblyContext_AllocationContext href="default.system#_8XaXgEA7EemyNJeBPf32Tg"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_a-Z5gEA9EemyNJeBPf32Tg" entityName="Allocation_Assembly_MemoryRequest &lt;MemoryRequest> &lt;MemoryRequest>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_EEpI8EA8EemyNJeBPf32Tg"/>
+    <assemblyContext_AllocationContext href="default.system#_-1UkYEA7EemyNJeBPf32Tg"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_bn1RAEA9EemyNJeBPf32Tg" entityName="Allocation_Assembly_ExperimentHandler &lt;ExperimentHandler> &lt;ExperimentHandler>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_LbO8AEA8EemyNJeBPf32Tg"/>
+    <assemblyContext_AllocationContext href="default.system#_5bIMkEA7EemyNJeBPf32Tg"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_h4LN8FC1EemaFLg2cxAENw" entityName="Allocation_Assembly_Cache &lt;Cache> &lt;Cache>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_VJZOMFC1EemaFLg2cxAENw"/>
+    <assemblyContext_AllocationContext href="default.system#_ewN-gFC1EemaFLg2cxAENw"/>
+  </allocationContexts_Allocation>
+</allocation:Allocation>

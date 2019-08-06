@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allocation:Allocation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" id="_k_Q6YFb6EemJd_1x_v9khA" entityName="defaultAllocation">
+  <targetResourceEnvironment_Allocation href="default.resourceenvironment#/"/>
+  <system_Allocation href="default.system#_xxUGAFb5EemJd_1x_v9khA"/>
+  <allocationContexts_Allocation id="_mdADsFb6EemJd_1x_v9khA" entityName="Allocation_Assembly_MatrixMultiplicator &lt;MatrixMultiplicator> &lt;MatrixMultiplicator>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_-0irwFb5EemJd_1x_v9khA"/>
+    <assemblyContext_AllocationContext href="default.system#_2Wtj0Fb5EemJd_1x_v9khA"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_nW5gIFb6EemJd_1x_v9khA" entityName="Allocation_Assembly_Memory &lt;Memory> &lt;Memory>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#___hRIFb5EemJd_1x_v9khA"/>
+    <assemblyContext_AllocationContext href="default.system#_6UbWkFb5EemJd_1x_v9khA"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_oCASoFb6EemJd_1x_v9khA" entityName="Allocation_Assembly_Cache &lt;Cache> &lt;Cache>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_AvR6IFb6EemJd_1x_v9khA"/>
+    <assemblyContext_AllocationContext href="default.system#_5iGhwFb5EemJd_1x_v9khA"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_ozR-kFb6EemJd_1x_v9khA" entityName="Allocation_Assembly_ExperimentHandler &lt;ExperimentHandler> &lt;ExperimentHandler>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_CKvLgFb6EemJd_1x_v9khA"/>
+    <assemblyContext_AllocationContext href="default.system#_1EixUFb5EemJd_1x_v9khA"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_K5fDAGIsEemAsplHm7U1gQ" entityName="Allocation_Assembly_CacheL1 &lt;CacheL1> &lt;CacheL1>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_B2XSIGIrEemAsplHm7U1gQ"/>
+    <assemblyContext_AllocationContext href="default.system#_ACaLwGIsEemAsplHm7U1gQ"/>
+  </allocationContexts_Allocation>
+</allocation:Allocation>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_nl7iEEA6EemyNJeBPf32Tg" entityName="defaultRepository">
+  <components__Repository xsi:type="repository:BasicComponent" id="_tqtH8EA6EemyNJeBPf32Tg" entityName="MatrixMultiplicator">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_K-HXoEA7EemyNJeBPf32Tg" entityName="Provided_IMatrixMultiplicator_MatrixMultiplicator" providedInterface__OperationProvidedRole="_n_w-YEA6EemyNJeBPf32Tg"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_QFqgQEA7EemyNJeBPf32Tg" entityName="Required_IMemoryRequest_MatrixMultiplicator" requiredInterface__OperationRequiredRole="_rvcVIEA6EemyNJeBPf32Tg"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Z05wgFC0EemaFLg2cxAENw" entityName="Required_ICache_MatrixMultiplicator" requiredInterface__OperationRequiredRole="_VVx50FC0EemaFLg2cxAENw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_Ggqp4F8REemm5Yj2ttiPbw" entityName="Required_ICacheL1_MatrixMultiplicator" requiredInterface__OperationRequiredRole="__DrT4F8QEemm5Yj2ttiPbw"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_umEM4GJ8Eemxcqhz5PlDEw" entityName="Required_ICacheRequestL2_MatrixMultiplicator" requiredInterface__OperationRequiredRole="_hVZoEGJ8Eemxcqhz5PlDEw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_K-HXoUA7EemyNJeBPf32Tg" describedService__SEFF="_xvhBMEA6EemyNJeBPf32Tg">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_K-HXokA7EemyNJeBPf32Tg" entityName="start" successor_AbstractAction="_KkcvEEBqEemIBv2DoJAsew"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_K-HXo0A7EemyNJeBPf32Tg" entityName="stop" predecessor_AbstractAction="_B7Da4EBrEemIBv2DoJAsew"/>
+      <steps_Behaviour xsi:type="seff:ForkAction" id="_THpqkEA7EemyNJeBPf32Tg" predecessor_AbstractAction="_xz8jkFC0EemaFLg2cxAENw" successor_AbstractAction="_vWo90F8REemm5Yj2ttiPbw">
+        <synchronisingBehaviours_ForkAction id="_Vf1p8EA7EemyNJeBPf32Tg">
+          <synchronousForkedBehaviours_SynchronisationPoint id="_YQDHwEA7EemyNJeBPf32Tg">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_YQDHwUA7EemyNJeBPf32Tg" successor_AbstractAction="_iDW04EA7EemyNJeBPf32Tg"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_YQDHwkA7EemyNJeBPf32Tg" predecessor_AbstractAction="_iDW04EA7EemyNJeBPf32Tg"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_iDW04EA7EemyNJeBPf32Tg" predecessor_AbstractAction="_YQDHwUA7EemyNJeBPf32Tg" successor_AbstractAction="_YQDHwkA7EemyNJeBPf32Tg">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0.00000172*matrixASizeM.VALUE*matrixASizeN.VALUE*matrixBSizeJ.VALUE/2"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+          </synchronousForkedBehaviours_SynchronisationPoint>
+          <synchronousForkedBehaviours_SynchronisationPoint id="_2cmCEEA_EemyNJeBPf32Tg">
+            <steps_Behaviour xsi:type="seff:StartAction" id="_2cn3QEA_EemyNJeBPf32Tg" successor_AbstractAction="_36EssEA_EemyNJeBPf32Tg"/>
+            <steps_Behaviour xsi:type="seff:StopAction" id="_2cn3QUA_EemyNJeBPf32Tg" predecessor_AbstractAction="_36EssEA_EemyNJeBPf32Tg"/>
+            <steps_Behaviour xsi:type="seff:InternalAction" id="_36EssEA_EemyNJeBPf32Tg" predecessor_AbstractAction="_2cn3QEA_EemyNJeBPf32Tg" successor_AbstractAction="_2cn3QUA_EemyNJeBPf32Tg">
+              <resourceDemand_Action>
+                <specification_ParametericResourceDemand specification="0.00000172*matrixASizeM.VALUE*matrixASizeN.VALUE*matrixBSizeJ.VALUE/2"/>
+                <requiredResource_ParametricResourceDemand href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+              </resourceDemand_Action>
+            </steps_Behaviour>
+          </synchronousForkedBehaviours_SynchronisationPoint>
+        </synchronisingBehaviours_ForkAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_KkcvEEBqEemIBv2DoJAsew" predecessor_AbstractAction="_K-HXokA7EemyNJeBPf32Tg" successor_AbstractAction="_9wmdYGJ8Eemxcqhz5PlDEw" calledService_ExternalService="_yfu9MEA6EemyNJeBPf32Tg" role_ExternalService="_QFqgQEA7EemyNJeBPf32Tg">
+        <returnVariableUsage__CallReturnAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="RETURN.BYTESIZE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="return"/>
+        </returnVariableUsage__CallReturnAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_B7Da4EBrEemIBv2DoJAsew" predecessor_AbstractAction="_vWo90F8REemm5Yj2ttiPbw" successor_AbstractAction="_K-HXo0A7EemyNJeBPf32Tg" calledService_ExternalService="_3unc4EA6EemyNJeBPf32Tg" role_ExternalService="_QFqgQEA7EemyNJeBPf32Tg">
+        <inputVariableUsages__CallAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="1"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="inputArray"/>
+        </inputVariableUsages__CallAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_xz8jkFC0EemaFLg2cxAENw" predecessor_AbstractAction="_9wmdYGJ8Eemxcqhz5PlDEw" successor_AbstractAction="_THpqkEA7EemyNJeBPf32Tg" calledService_ExternalService="_XFrxMFC0EemaFLg2cxAENw" role_ExternalService="_Z05wgFC0EemaFLg2cxAENw">
+        <inputVariableUsages__CallAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="1"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="inputArray"/>
+        </inputVariableUsages__CallAction>
+        <returnVariableUsage__CallReturnAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="RETURN.BYTESIZE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="return"/>
+        </returnVariableUsage__CallReturnAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_vWo90F8REemm5Yj2ttiPbw" predecessor_AbstractAction="_THpqkEA7EemyNJeBPf32Tg" successor_AbstractAction="_B7Da4EBrEemIBv2DoJAsew" calledService_ExternalService="_ATANwF8REemm5Yj2ttiPbw" role_ExternalService="_Ggqp4F8REemm5Yj2ttiPbw">
+        <inputVariableUsages__CallAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="1"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="inputArray"/>
+        </inputVariableUsages__CallAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_9wmdYGJ8Eemxcqhz5PlDEw" predecessor_AbstractAction="_KkcvEEBqEemIBv2DoJAsew" successor_AbstractAction="_xz8jkFC0EemaFLg2cxAENw" calledService_ExternalService="_jVnzYGJ8Eemxcqhz5PlDEw" role_ExternalService="_umEM4GJ8Eemxcqhz5PlDEw">
+        <inputVariableUsages__CallAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="1"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="inputArray"/>
+        </inputVariableUsages__CallAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_uCRTYEA6EemyNJeBPf32Tg" entityName="ExperimentHandler">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_KhWjIEA7EemyNJeBPf32Tg" entityName="Provided_IExmperimentHandler_ExperimentHandler" providedInterface__OperationProvidedRole="_qClxwEA6EemyNJeBPf32Tg"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_NKoSgEA7EemyNJeBPf32Tg" entityName="Required_IMatrixMultiplicator_ExperimentHandler" requiredInterface__OperationRequiredRole="_n_w-YEA6EemyNJeBPf32Tg"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_KhXKMEA7EemyNJeBPf32Tg" describedService__SEFF="_yIilMEA6EemyNJeBPf32Tg">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_KhXKMUA7EemyNJeBPf32Tg" entityName="start" successor_AbstractAction="_yN-XcEA9EemyNJeBPf32Tg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_KhXKMkA7EemyNJeBPf32Tg" entityName="stop" predecessor_AbstractAction="_yN-XcEA9EemyNJeBPf32Tg"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_yN-XcEA9EemyNJeBPf32Tg" predecessor_AbstractAction="_KhXKMUA7EemyNJeBPf32Tg" successor_AbstractAction="_KhXKMkA7EemyNJeBPf32Tg" calledService_ExternalService="_xvhBMEA6EemyNJeBPf32Tg" role_ExternalService="_NKoSgEA7EemyNJeBPf32Tg">
+        <inputVariableUsages__CallAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="matrixASizeM.VALUE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="matrixASizeM"/>
+        </inputVariableUsages__CallAction>
+        <inputVariableUsages__CallAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="matrixASizeN.VALUE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="matrixASizeN"/>
+        </inputVariableUsages__CallAction>
+        <inputVariableUsages__CallAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="matrixBSizeI.VALUE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="matrixBSizeI"/>
+        </inputVariableUsages__CallAction>
+        <inputVariableUsages__CallAction>
+          <variableCharacterisation_VariableUsage type="VALUE">
+            <specification_VariableCharacterisation specification="matrixBSizeJ.VALUE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="matrixBSizeJ"/>
+        </inputVariableUsages__CallAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_uSh88EA6EemyNJeBPf32Tg" entityName="MemoryRequest">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_PbapYEA7EemyNJeBPf32Tg" entityName="Provided_IMemoryRequest_MemoryRequest" providedInterface__OperationProvidedRole="_rvcVIEA6EemyNJeBPf32Tg"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_PbapYUA7EemyNJeBPf32Tg" describedService__SEFF="_yfu9MEA6EemyNJeBPf32Tg">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_PbapYkA7EemyNJeBPf32Tg" entityName="start" successor_AbstractAction="_2pIz0EBAEemyNJeBPf32Tg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_PbapY0A7EemyNJeBPf32Tg" entityName="stop" predecessor_AbstractAction="_2pIz0EBAEemyNJeBPf32Tg"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_2pIz0EBAEemyNJeBPf32Tg" predecessor_AbstractAction="_PbapYkA7EemyNJeBPf32Tg" successor_AbstractAction="_PbapY0A7EemyNJeBPf32Tg">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="0"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="RETURN"/>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_PbapZEA7EemyNJeBPf32Tg" describedService__SEFF="_3unc4EA6EemyNJeBPf32Tg">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_PbapZUA7EemyNJeBPf32Tg" entityName="start" successor_AbstractAction="_y-eG0EBqEemIBv2DoJAsew"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_PbapZkA7EemyNJeBPf32Tg" entityName="stop" predecessor_AbstractAction="_y-eG0EBqEemIBv2DoJAsew"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_y-eG0EBqEemIBv2DoJAsew" predecessor_AbstractAction="_PbapZUA7EemyNJeBPf32Tg" successor_AbstractAction="_PbapZkA7EemyNJeBPf32Tg">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="990467&#xD;&#xA;"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="RETURN"/>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_UbusYFC0EemaFLg2cxAENw" entityName="Cache">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_fvRdMFC0EemaFLg2cxAENw" entityName="Provided_ICache_Cache" providedInterface__OperationProvidedRole="_VVx50FC0EemaFLg2cxAENw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_fvSrUFC0EemaFLg2cxAENw" describedService__SEFF="_XFrxMFC0EemaFLg2cxAENw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_fvSrUVC0EemaFLg2cxAENw" entityName="start" successor_AbstractAction="_my20sFC0EemaFLg2cxAENw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_fvTSYFC0EemaFLg2cxAENw" entityName="stop" predecessor_AbstractAction="_my20sFC0EemaFLg2cxAENw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_my20sFC0EemaFLg2cxAENw" entityName="Level3" predecessor_AbstractAction="_fvSrUVC0EemaFLg2cxAENw" successor_AbstractAction="_fvTSYFC0EemaFLg2cxAENw">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="1237227&#xD;&#xA;"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="RETURN"/>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_9gbYcF8QEemm5Yj2ttiPbw" entityName="CacheL1">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_FjaXcF8REemm5Yj2ttiPbw" entityName="Provided_ICacheL1_CacheL1" providedInterface__OperationProvidedRole="__DrT4F8QEemm5Yj2ttiPbw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_FjcMoF8REemm5Yj2ttiPbw" describedService__SEFF="_ATANwF8REemm5Yj2ttiPbw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_FjczsF8REemm5Yj2ttiPbw" entityName="start" successor_AbstractAction="_In1xwF8REemm5Yj2ttiPbw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_FjczsV8REemm5Yj2ttiPbw" entityName="stop" predecessor_AbstractAction="_In1xwF8REemm5Yj2ttiPbw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_IMddUF8REemm5Yj2ttiPbw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_In1xwF8REemm5Yj2ttiPbw" entityName="L1" predecessor_AbstractAction="_FjczsF8REemm5Yj2ttiPbw" successor_AbstractAction="_FjczsV8REemm5Yj2ttiPbw">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="325748813/2"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="RETURN"/>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_qKvREGJ8Eemxcqhz5PlDEw" entityName="CacheL2">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_sjGPkGJ8Eemxcqhz5PlDEw" entityName="Provided_ICacheRequestL2_CacheL2" providedInterface__OperationProvidedRole="_hVZoEGJ8Eemxcqhz5PlDEw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_sjLIEGJ8Eemxcqhz5PlDEw" describedService__SEFF="_jVnzYGJ8Eemxcqhz5PlDEw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_sjLvIGJ8Eemxcqhz5PlDEw" entityName="start" successor_AbstractAction="_xoZVcGJ8Eemxcqhz5PlDEw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_sjMWMGJ8Eemxcqhz5PlDEw" entityName="stop" predecessor_AbstractAction="_xoZVcGJ8Eemxcqhz5PlDEw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_xoZVcGJ8Eemxcqhz5PlDEw" entityName="L2" predecessor_AbstractAction="_sjLvIGJ8Eemxcqhz5PlDEw" successor_AbstractAction="_sjMWMGJ8Eemxcqhz5PlDEw">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="7218138/2"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="RETURN"/>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_n_w-YEA6EemyNJeBPf32Tg" entityName="IMatrixMultiplicator">
+    <signatures__OperationInterface id="_xvhBMEA6EemyNJeBPf32Tg" entityName="multiplyMatrix">
+      <parameters__OperationSignature parameterName="matrixASizeM">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="matrixASizeN">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="matrixBSizeI">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="matrixBSizeJ">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_qClxwEA6EemyNJeBPf32Tg" entityName="IExmperimentHandler">
+    <signatures__OperationInterface id="_yIilMEA6EemyNJeBPf32Tg" entityName="simulateMatrix">
+      <parameters__OperationSignature parameterName="matrixASizeM">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="matrixASizeN">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="matrixBSizeI">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="matrixBSizeJ">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_rvcVIEA6EemyNJeBPf32Tg" entityName="IMemoryRequest">
+    <signatures__OperationInterface id="_yfu9MEA6EemyNJeBPf32Tg" entityName="read">
+      <parameters__OperationSignature parameterName="inputArray">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+    <signatures__OperationInterface id="_3unc4EA6EemyNJeBPf32Tg" entityName="write">
+      <parameters__OperationSignature parameterName="inputArray">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_VVx50FC0EemaFLg2cxAENw" entityName="ICache">
+    <signatures__OperationInterface id="_XFrxMFC0EemaFLg2cxAENw" entityName="cacheRequest">
+      <parameters__OperationSignature parameterName="inputArray">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="__DrT4F8QEemm5Yj2ttiPbw" entityName="ICacheL1">
+    <signatures__OperationInterface id="_ATANwF8REemm5Yj2ttiPbw" entityName="cacheRequestL1">
+      <parameters__OperationSignature parameterName="inputArray">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_hVZoEGJ8Eemxcqhz5PlDEw" entityName="ICacheRequestL2">
+    <signatures__OperationInterface id="_jVnzYGJ8Eemxcqhz5PlDEw" entityName="cacheRequestL2">
+      <parameters__OperationSignature parameterName="inputArray">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+</repository:Repository>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:system="http://palladiosimulator.org/PalladioComponentModel/System/5.2" id="_xxUGAFb5EemJd_1x_v9khA" entityName="defaultSystem">
+  <assemblyContexts__ComposedStructure id="_1EixUFb5EemJd_1x_v9khA" entityName="Assembly_ExperimentHandler &lt;ExperimentHandler>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="default.repository#__KkGcFb2EemJd_1x_v9khA"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_2Wtj0Fb5EemJd_1x_v9khA" entityName="Assembly_MatrixMultiplicator &lt;MatrixMultiplicator>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="default.repository#_-4ffAFb2EemJd_1x_v9khA"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_5iGhwFb5EemJd_1x_v9khA" entityName="Assembly_Cache &lt;Cache>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="default.repository#__xBCcFb2EemJd_1x_v9khA"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_6UbWkFb5EemJd_1x_v9khA" entityName="Assembly_Memory &lt;Memory>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="default.repository#__iv88Fb2EemJd_1x_v9khA"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_ICQpQGCiEemMBa6C7Y1q2w" entityName="Assembly_CacheL1 &lt;CacheL1>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="default.repository#_yliB8GChEemMBa6C7Y1q2w"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_XraHoGJ_Eemxcqhz5PlDEw" entityName="Assembly_CacheL2 &lt;CacheL2>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="default.repository#_6L5VoGJ-Eemxcqhz5PlDEw"/>
+  </assemblyContexts__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_4XKYoFb5EemJd_1x_v9khA" entityName="ProvDelegation Provided_IExperimentHandler -> Provided_IExperimentHandler_ExperimentHandler" outerProvidedRole_ProvidedDelegationConnector="_yQcSAFb5EemJd_1x_v9khA" assemblyContext_ProvidedDelegationConnector="_1EixUFb5EemJd_1x_v9khA">
+    <innerProvidedRole_ProvidedDelegationConnector href="default.repository#_IjOe8Fb3EemJd_1x_v9khA"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_5KCnEFb5EemJd_1x_v9khA" entityName="Connector Assembly_ExperimentHandler &lt;ExperimentHandler> -> Assembly_MatrixMultiplicator &lt;MatrixMultiplicator>" requiringAssemblyContext_AssemblyConnector="_1EixUFb5EemJd_1x_v9khA" providingAssemblyContext_AssemblyConnector="_2Wtj0Fb5EemJd_1x_v9khA">
+    <providedRole_AssemblyConnector href="default.repository#_IGKIcFb3EemJd_1x_v9khA"/>
+    <requiredRole_AssemblyConnector href="default.repository#_JVQY0Fb3EemJd_1x_v9khA"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_744L4Fb5EemJd_1x_v9khA" entityName="Connector Assembly_MatrixMultiplicator &lt;MatrixMultiplicator> -> Assembly_Memory &lt;Memory>" requiringAssemblyContext_AssemblyConnector="_2Wtj0Fb5EemJd_1x_v9khA" providingAssemblyContext_AssemblyConnector="_6UbWkFb5EemJd_1x_v9khA">
+    <providedRole_AssemblyConnector href="default.repository#_O6iw4Fb4EemJd_1x_v9khA"/>
+    <requiredRole_AssemblyConnector href="default.repository#_IFMNMFb5EemJd_1x_v9khA"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_8V3p4Fb5EemJd_1x_v9khA" entityName="Connector Assembly_MatrixMultiplicator &lt;MatrixMultiplicator> -> Assembly_Cache &lt;Cache>" requiringAssemblyContext_AssemblyConnector="_2Wtj0Fb5EemJd_1x_v9khA" providingAssemblyContext_AssemblyConnector="_5iGhwFb5EemJd_1x_v9khA">
+    <providedRole_AssemblyConnector href="default.repository#_Ph0zUFb4EemJd_1x_v9khA"/>
+    <requiredRole_AssemblyConnector href="default.repository#_JgDBoFb5EemJd_1x_v9khA"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_JfYHgGCiEemMBa6C7Y1q2w" entityName="Connector Assembly_MatrixMultiplicator &lt;MatrixMultiplicator> -> Assembly_CacheL1 &lt;CacheL1>" requiringAssemblyContext_AssemblyConnector="_2Wtj0Fb5EemJd_1x_v9khA" providingAssemblyContext_AssemblyConnector="_ICQpQGCiEemMBa6C7Y1q2w">
+    <providedRole_AssemblyConnector href="default.repository#_0AinYGChEemMBa6C7Y1q2w"/>
+    <requiredRole_AssemblyConnector href="default.repository#_yKOmAGChEemMBa6C7Y1q2w"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_ZMOaIGJ_Eemxcqhz5PlDEw" entityName="Connector Assembly_MatrixMultiplicator &lt;MatrixMultiplicator> -> Assembly_CacheL2 &lt;CacheL2>" requiringAssemblyContext_AssemblyConnector="_2Wtj0Fb5EemJd_1x_v9khA" providingAssemblyContext_AssemblyConnector="_XraHoGJ_Eemxcqhz5PlDEw">
+    <providedRole_AssemblyConnector href="default.repository#_7ufw0GJ-Eemxcqhz5PlDEw"/>
+    <requiredRole_AssemblyConnector href="default.repository#_8dxRoGJ-Eemxcqhz5PlDEw"/>
+  </connectors__ComposedStructure>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_yQcSAFb5EemJd_1x_v9khA" entityName="Provided_IExperimentHandler">
+    <providedInterface__OperationProvidedRole href="default.repository#_VTT7sFb2EemJd_1x_v9khA"/>
+  </providedRoles_InterfaceProvidingEntity>
+</system:System>

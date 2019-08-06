@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<system:System xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:composition="http://palladiosimulator.org/PalladioComponentModel/Core/Composition/5.2" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:system="http://palladiosimulator.org/PalladioComponentModel/System/5.2" id="_cgmKYEBQEemyNJeBPf32Tg" entityName="defaultSystem">
+  <assemblyContexts__ComposedStructure id="_gTDIUEBQEemyNJeBPf32Tg" entityName="Assembly_Memory &lt;Memory>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="default.repository#_14ifgEBPEemyNJeBPf32Tg"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_9g90AEBQEemyNJeBPf32Tg" entityName="Assembly_MemTest86 &lt;MemTest86>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="default.repository#_3Zk0cEBPEemyNJeBPf32Tg"/>
+  </assemblyContexts__ComposedStructure>
+  <assemblyContexts__ComposedStructure id="_xE36sEGYEemSWdnfYWhqIw" entityName="Assembly_Cache &lt;Cache>">
+    <encapsulatedComponent__AssemblyContext xsi:type="repository:BasicComponent" href="default.repository#_h3yh8EGXEemSWdnfYWhqIw"/>
+  </assemblyContexts__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:ProvidedDelegationConnector" id="_-ra08EBQEemyNJeBPf32Tg" entityName="ProvDelegation Provided_IMemTest86 -> Provided_IMemTest86_MemTest86" outerProvidedRole_ProvidedDelegationConnector="_c9_4EEBQEemyNJeBPf32Tg" assemblyContext_ProvidedDelegationConnector="_9g90AEBQEemyNJeBPf32Tg">
+    <innerProvidedRole_ProvidedDelegationConnector href="default.repository#_ANwm4EBQEemyNJeBPf32Tg"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="__d_hYEBQEemyNJeBPf32Tg" entityName="Connector Assembly_MemTest86 &lt;MemTest86> -> Assembly_Memory &lt;Memory>" requiringAssemblyContext_AssemblyConnector="_9g90AEBQEemyNJeBPf32Tg" providingAssemblyContext_AssemblyConnector="_gTDIUEBQEemyNJeBPf32Tg">
+    <providedRole_AssemblyConnector href="default.repository#_Ameo4EBQEemyNJeBPf32Tg"/>
+    <requiredRole_AssemblyConnector href="default.repository#_BF03UEBQEemyNJeBPf32Tg"/>
+  </connectors__ComposedStructure>
+  <connectors__ComposedStructure xsi:type="composition:AssemblyConnector" id="_yVi4YEGYEemSWdnfYWhqIw" entityName="Connector Assembly_MemTest86 &lt;MemTest86> -> Assembly_Cache &lt;Cache>" requiringAssemblyContext_AssemblyConnector="_9g90AEBQEemyNJeBPf32Tg" providingAssemblyContext_AssemblyConnector="_xE36sEGYEemSWdnfYWhqIw">
+    <providedRole_AssemblyConnector href="default.repository#_lLqGcEGXEemSWdnfYWhqIw"/>
+    <requiredRole_AssemblyConnector href="default.repository#_mMmmEEGXEemSWdnfYWhqIw"/>
+  </connectors__ComposedStructure>
+  <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_c9_4EEBQEemyNJeBPf32Tg" entityName="Provided_IMemTest86">
+    <providedInterface__OperationProvidedRole href="default.repository#_zZgRQEBPEemyNJeBPf32Tg"/>
+  </providedRoles_InterfaceProvidingEntity>
+</system:System>

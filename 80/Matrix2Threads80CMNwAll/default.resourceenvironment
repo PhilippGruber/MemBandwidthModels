@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourceenvironment:ResourceEnvironment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:resourceenvironment="http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2">
+  <linkingResources__ResourceEnvironment id="_NHZi4EA8EemyNJeBPf32Tg" connectedResourceContainers_LinkingResource="_DELxgEA8EemyNJeBPf32Tg _LbO8AEA8EemyNJeBPf32Tg">
+    <communicationLinkResourceSpecifications_LinkingResource id="_NHaJ8EA8EemyNJeBPf32Tg">
+      <communicationLinkResourceType_CommunicationLinkResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_o3sScH2AEdyH8uerKnHYug"/>
+      <latency_CommunicationLinkResourceSpecification specification="0"/>
+      <throughput_CommunicationLinkResourceSpecification specification="10000000"/>
+    </communicationLinkResourceSpecifications_LinkingResource>
+  </linkingResources__ResourceEnvironment>
+  <linkingResources__ResourceEnvironment id="_Qxl8sEA8EemyNJeBPf32Tg" entityName="MemoryBus" connectedResourceContainers_LinkingResource="_DELxgEA8EemyNJeBPf32Tg _EEpI8EA8EemyNJeBPf32Tg">
+    <communicationLinkResourceSpecifications_LinkingResource id="_Qxl8sUA8EemyNJeBPf32Tg">
+      <communicationLinkResourceType_CommunicationLinkResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_o3sScH2AEdyH8uerKnHYug"/>
+      <latency_CommunicationLinkResourceSpecification specification="0.000053/2"/>
+      <throughput_CommunicationLinkResourceSpecification specification="4777"/>
+    </communicationLinkResourceSpecifications_LinkingResource>
+  </linkingResources__ResourceEnvironment>
+  <linkingResources__ResourceEnvironment id="_YNDzgFC1EemaFLg2cxAENw" connectedResourceContainers_LinkingResource="_VJZOMFC1EemaFLg2cxAENw _DELxgEA8EemyNJeBPf32Tg">
+    <communicationLinkResourceSpecifications_LinkingResource id="_YNTEEFC1EemaFLg2cxAENw">
+      <communicationLinkResourceType_CommunicationLinkResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_o3sScH2AEdyH8uerKnHYug"/>
+      <latency_CommunicationLinkResourceSpecification specification="0"/>
+      <throughput_CommunicationLinkResourceSpecification specification="21966"/>
+    </communicationLinkResourceSpecifications_LinkingResource>
+  </linkingResources__ResourceEnvironment>
+  <linkingResources__ResourceEnvironment id="_nx9g4F8QEemm5Yj2ttiPbw" connectedResourceContainers_LinkingResource="_DELxgEA8EemyNJeBPf32Tg _jx4WoF8QEemm5Yj2ttiPbw">
+    <communicationLinkResourceSpecifications_LinkingResource id="_nyDngF8QEemm5Yj2ttiPbw">
+      <communicationLinkResourceType_CommunicationLinkResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_o3sScH2AEdyH8uerKnHYug"/>
+      <latency_CommunicationLinkResourceSpecification specification="0"/>
+      <throughput_CommunicationLinkResourceSpecification specification="59800"/>
+    </communicationLinkResourceSpecifications_LinkingResource>
+  </linkingResources__ResourceEnvironment>
+  <linkingResources__ResourceEnvironment id="_SNZRsGJ9Eemxcqhz5PlDEw" entityName="L2" connectedResourceContainers_LinkingResource="_NFZdIGJ9Eemxcqhz5PlDEw _DELxgEA8EemyNJeBPf32Tg">
+    <communicationLinkResourceSpecifications_LinkingResource id="_SNdjIGJ9Eemxcqhz5PlDEw">
+      <communicationLinkResourceType_CommunicationLinkResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_o3sScH2AEdyH8uerKnHYug"/>
+      <latency_CommunicationLinkResourceSpecification specification="0"/>
+      <throughput_CommunicationLinkResourceSpecification specification="31504"/>
+    </communicationLinkResourceSpecifications_LinkingResource>
+  </linkingResources__ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_DELxgEA8EemyNJeBPf32Tg" entityName="CPU">
+    <activeResourceSpecifications_ResourceContainer id="_Q6tnAEA9EemyNJeBPf32Tg" numberOfReplicas="2">
+      <schedulingPolicy href="pathmap://PCM_EXACT_SCHEDULER_MODELS/ExactSchedulers.resourcetype #edu.kit.ipd.sdq.pcm.simulation.scheduler.exact.linux26o1"/>
+      <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+      <processingRate_ProcessingResourceSpecification specification="1"/>
+    </activeResourceSpecifications_ResourceContainer>
+  </resourceContainer_ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_EEpI8EA8EemyNJeBPf32Tg" entityName="Memory">
+    <activeResourceSpecifications_ResourceContainer id="_UBcj4EA8EemyNJeBPf32Tg">
+      <schedulingPolicy href="pathmap://PCM_EXACT_SCHEDULER_MODELS/ExactSchedulers.resourcetype #edu.kit.ipd.sdq.pcm.simulation.scheduler.exact.linux26o1"/>
+      <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+      <processingRate_ProcessingResourceSpecification specification="1"/>
+    </activeResourceSpecifications_ResourceContainer>
+  </resourceContainer_ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_LbO8AEA8EemyNJeBPf32Tg" entityName="Handler">
+    <activeResourceSpecifications_ResourceContainer id="_Osv6oEA9EemyNJeBPf32Tg">
+      <schedulingPolicy href="pathmap://PCM_EXACT_SCHEDULER_MODELS/ExactSchedulers.resourcetype #edu.kit.ipd.sdq.pcm.simulation.scheduler.exact.linux26o1"/>
+      <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+      <processingRate_ProcessingResourceSpecification specification="1"/>
+    </activeResourceSpecifications_ResourceContainer>
+  </resourceContainer_ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_VJZOMFC1EemaFLg2cxAENw" entityName="CacheL3">
+    <activeResourceSpecifications_ResourceContainer id="_WTAhoFC1EemaFLg2cxAENw">
+      <schedulingPolicy href="pathmap://PCM_EXACT_SCHEDULER_MODELS/ExactSchedulers.resourcetype #edu.kit.ipd.sdq.pcm.simulation.scheduler.exact.linux26o1"/>
+      <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+      <processingRate_ProcessingResourceSpecification specification="1"/>
+    </activeResourceSpecifications_ResourceContainer>
+  </resourceContainer_ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_jx4WoF8QEemm5Yj2ttiPbw" entityName="CacheL1">
+    <activeResourceSpecifications_ResourceContainer id="_mLD0gF8QEemm5Yj2ttiPbw">
+      <schedulingPolicy href="pathmap://PCM_EXACT_SCHEDULER_MODELS/ExactSchedulers.resourcetype #edu.kit.ipd.sdq.pcm.simulation.scheduler.exact.linux26o1"/>
+      <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+      <processingRate_ProcessingResourceSpecification specification="1"/>
+    </activeResourceSpecifications_ResourceContainer>
+  </resourceContainer_ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_NFZdIGJ9Eemxcqhz5PlDEw" entityName="CacheL2">
+    <activeResourceSpecifications_ResourceContainer id="_OXiacGJ9Eemxcqhz5PlDEw">
+      <schedulingPolicy href="pathmap://PCM_EXACT_SCHEDULER_MODELS/ExactSchedulers.resourcetype #edu.kit.ipd.sdq.pcm.simulation.scheduler.exact.linux26o1"/>
+      <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+      <processingRate_ProcessingResourceSpecification specification="1"/>
+    </activeResourceSpecifications_ResourceContainer>
+  </resourceContainer_ResourceEnvironment>
+</resourceenvironment:ResourceEnvironment>

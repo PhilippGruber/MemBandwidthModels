@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resourceenvironment:ResourceEnvironment xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:resourceenvironment="http://palladiosimulator.org/PalladioComponentModel/ResourceEnvironment/5.2">
+  <linkingResources__ResourceEnvironment id="_szjbgEBQEemyNJeBPf32Tg" connectedResourceContainers_LinkingResource="_orKp0EBQEemyNJeBPf32Tg _ptJrQEBQEemyNJeBPf32Tg">
+    <communicationLinkResourceSpecifications_LinkingResource id="_szjbgUBQEemyNJeBPf32Tg">
+      <communicationLinkResourceType_CommunicationLinkResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_o3sScH2AEdyH8uerKnHYug"/>
+      <latency_CommunicationLinkResourceSpecification specification="0.000000021"/>
+      <throughput_CommunicationLinkResourceSpecification specification="23976"/>
+    </communicationLinkResourceSpecifications_LinkingResource>
+  </linkingResources__ResourceEnvironment>
+  <linkingResources__ResourceEnvironment id="_4D0CwEGYEemSWdnfYWhqIw" connectedResourceContainers_LinkingResource="_orKp0EBQEemyNJeBPf32Tg _0elBcEGYEemSWdnfYWhqIw">
+    <communicationLinkResourceSpecifications_LinkingResource id="_4D3GEEGYEemSWdnfYWhqIw">
+      <communicationLinkResourceType_CommunicationLinkResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_o3sScH2AEdyH8uerKnHYug"/>
+      <latency_CommunicationLinkResourceSpecification specification="0"/>
+      <throughput_CommunicationLinkResourceSpecification specification="55208"/>
+    </communicationLinkResourceSpecifications_LinkingResource>
+  </linkingResources__ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_orKp0EBQEemyNJeBPf32Tg" entityName="CPU">
+    <activeResourceSpecifications_ResourceContainer id="_qcIRIEBQEemyNJeBPf32Tg">
+      <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
+      <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+      <processingRate_ProcessingResourceSpecification specification="1"/>
+    </activeResourceSpecifications_ResourceContainer>
+  </resourceContainer_ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_ptJrQEBQEemyNJeBPf32Tg" entityName="Memory">
+    <activeResourceSpecifications_ResourceContainer id="_rs1rEEBQEemyNJeBPf32Tg">
+      <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
+      <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+      <processingRate_ProcessingResourceSpecification specification="1"/>
+    </activeResourceSpecifications_ResourceContainer>
+  </resourceContainer_ResourceEnvironment>
+  <resourceContainer_ResourceEnvironment id="_0elBcEGYEemSWdnfYWhqIw" entityName="Cache">
+    <activeResourceSpecifications_ResourceContainer id="_1r1ewEGYEemSWdnfYWhqIw">
+      <schedulingPolicy href="pathmap://PCM_MODELS/Palladio.resourcetype#ProcessorSharing"/>
+      <activeResourceType_ActiveResourceSpecification href="pathmap://PCM_MODELS/Palladio.resourcetype#_oro4gG3fEdy4YaaT-RYrLQ"/>
+      <processingRate_ProcessingResourceSpecification specification="1"/>
+    </activeResourceSpecifications_ResourceContainer>
+  </resourceContainer_ResourceEnvironment>
+</resourceenvironment:ResourceEnvironment>

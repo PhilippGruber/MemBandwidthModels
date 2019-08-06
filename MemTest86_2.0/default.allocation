@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<allocation:Allocation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:allocation="http://palladiosimulator.org/PalladioComponentModel/Allocation/5.2" id="_2QFAUEBQEemyNJeBPf32Tg" entityName="defaultAllocation">
+  <targetResourceEnvironment_Allocation href="default.resourceenvironment#/"/>
+  <system_Allocation href="default.system#_cgmKYEBQEemyNJeBPf32Tg"/>
+  <allocationContexts_Allocation id="_4HZuUEBQEemyNJeBPf32Tg" entityName="Allocation_Assembly_Memory &lt;Memory> &lt;Memory>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_ptJrQEBQEemyNJeBPf32Tg"/>
+    <assemblyContext_AllocationContext href="default.system#_gTDIUEBQEemyNJeBPf32Tg"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="_NQC8AEBREemyNJeBPf32Tg" entityName="Allocation_Assembly_MemTest86 &lt;MemTest86> &lt;MemTest86>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_orKp0EBQEemyNJeBPf32Tg"/>
+    <assemblyContext_AllocationContext href="default.system#_9g90AEBQEemyNJeBPf32Tg"/>
+  </allocationContexts_Allocation>
+  <allocationContexts_Allocation id="__fo7IEGYEemSWdnfYWhqIw" entityName="Allocation_Assembly_Cache &lt;Cache> &lt;Cache>">
+    <resourceContainer_AllocationContext href="default.resourceenvironment#_0elBcEGYEemSWdnfYWhqIw"/>
+    <assemblyContext_AllocationContext href="default.system#_xE36sEGYEemSWdnfYWhqIw"/>
+  </allocationContexts_Allocation>
+</allocation:Allocation>

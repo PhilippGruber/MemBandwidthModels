@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repository:Repository xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:repository="http://palladiosimulator.org/PalladioComponentModel/Repository/5.2" xmlns:seff="http://palladiosimulator.org/PalladioComponentModel/SEFF/5.2" xmlns:stoex="http://sdq.ipd.uka.de/StochasticExpressions/2.2" id="_yBgjkEBPEemyNJeBPf32Tg" entityName="defaultRepository">
+  <components__Repository xsi:type="repository:BasicComponent" id="_14ifgEBPEemyNJeBPf32Tg" entityName="Memory">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_Ameo4EBQEemyNJeBPf32Tg" entityName="Provided_IMemory_Memory" providedInterface__OperationProvidedRole="_1IBokEBPEemyNJeBPf32Tg"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_Ameo4UBQEemyNJeBPf32Tg" describedService__SEFF="_65i7QEBPEemyNJeBPf32Tg">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_Ameo4kBQEemyNJeBPf32Tg" entityName="start" successor_AbstractAction="_UXsJkEBQEemyNJeBPf32Tg"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_Ameo40BQEemyNJeBPf32Tg" entityName="stop" predecessor_AbstractAction="_UXsJkEBQEemyNJeBPf32Tg"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_UXsJkEBQEemyNJeBPf32Tg" predecessor_AbstractAction="_Ameo4kBQEemyNJeBPf32Tg" successor_AbstractAction="_Ameo40BQEemyNJeBPf32Tg">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="1000"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="RETURN"/>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_3Zk0cEBPEemyNJeBPf32Tg" entityName="MemTest86">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_ANwm4EBQEemyNJeBPf32Tg" entityName="Provided_IMemTest86_MemTest86" providedInterface__OperationProvidedRole="_zZgRQEBPEemyNJeBPf32Tg"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_BF03UEBQEemyNJeBPf32Tg" entityName="Required_IMemory_MemTest86" requiredInterface__OperationRequiredRole="_1IBokEBPEemyNJeBPf32Tg"/>
+    <requiredRoles_InterfaceRequiringEntity xsi:type="repository:OperationRequiredRole" id="_mMmmEEGXEemSWdnfYWhqIw" entityName="Required_ICache_MemTest86" requiredInterface__OperationRequiredRole="_XBmbgEGXEemSWdnfYWhqIw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_ANxN8EBQEemyNJeBPf32Tg" describedService__SEFF="_4rRs4EBPEemyNJeBPf32Tg">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_ANxN8UBQEemyNJeBPf32Tg" entityName="start" successor_AbstractAction="_B_9_UEGYEemSWdnfYWhqIw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_ANxN8kBQEemyNJeBPf32Tg" entityName="stop" predecessor_AbstractAction="_JYEaUEBQEemyNJeBPf32Tg"/>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_JYEaUEBQEemyNJeBPf32Tg" predecessor_AbstractAction="_B_9_UEGYEemSWdnfYWhqIw" successor_AbstractAction="_ANxN8kBQEemyNJeBPf32Tg" calledService_ExternalService="_65i7QEBPEemyNJeBPf32Tg" role_ExternalService="_BF03UEBQEemyNJeBPf32Tg">
+        <returnVariableUsage__CallReturnAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="RETURN.BYTESIZE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="return"/>
+        </returnVariableUsage__CallReturnAction>
+      </steps_Behaviour>
+      <steps_Behaviour xsi:type="seff:ExternalCallAction" id="_B_9_UEGYEemSWdnfYWhqIw" predecessor_AbstractAction="_ANxN8UBQEemyNJeBPf32Tg" successor_AbstractAction="_JYEaUEBQEemyNJeBPf32Tg" calledService_ExternalService="_Yc_bcEGXEemSWdnfYWhqIw" role_ExternalService="_mMmmEEGXEemSWdnfYWhqIw">
+        <returnVariableUsage__CallReturnAction>
+          <variableCharacterisation_VariableUsage>
+            <specification_VariableCharacterisation specification="RETURN.BYTESIZE"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="retrun"/>
+        </returnVariableUsage__CallReturnAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <components__Repository xsi:type="repository:BasicComponent" id="_h3yh8EGXEemSWdnfYWhqIw" entityName="Cache">
+    <providedRoles_InterfaceProvidingEntity xsi:type="repository:OperationProvidedRole" id="_lLqGcEGXEemSWdnfYWhqIw" entityName="Provided_ICache_Cache" providedInterface__OperationProvidedRole="_XBmbgEGXEemSWdnfYWhqIw"/>
+    <serviceEffectSpecifications__BasicComponent xsi:type="seff:ResourceDemandingSEFF" id="_lLtw0EGXEemSWdnfYWhqIw" describedService__SEFF="_Yc_bcEGXEemSWdnfYWhqIw">
+      <steps_Behaviour xsi:type="seff:StartAction" id="_lLu-8EGXEemSWdnfYWhqIw" entityName="start" successor_AbstractAction="_qFwo8EGXEemSWdnfYWhqIw"/>
+      <steps_Behaviour xsi:type="seff:StopAction" id="_lLu-8UGXEemSWdnfYWhqIw" entityName="stop" predecessor_AbstractAction="_qFwo8EGXEemSWdnfYWhqIw"/>
+      <steps_Behaviour xsi:type="seff:SetVariableAction" id="_qFwo8EGXEemSWdnfYWhqIw" entityName="Level3" predecessor_AbstractAction="_lLu-8EGXEemSWdnfYWhqIw" successor_AbstractAction="_lLu-8UGXEemSWdnfYWhqIw">
+        <localVariableUsages_SetVariableAction>
+          <variableCharacterisation_VariableUsage type="BYTESIZE">
+            <specification_VariableCharacterisation specification="6.144"/>
+          </variableCharacterisation_VariableUsage>
+          <namedReference__VariableUsage xsi:type="stoex:VariableReference" referenceName="RETURN"/>
+        </localVariableUsages_SetVariableAction>
+      </steps_Behaviour>
+    </serviceEffectSpecifications__BasicComponent>
+  </components__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_zZgRQEBPEemyNJeBPf32Tg" entityName="IMemTest86">
+    <signatures__OperationInterface id="_4rRs4EBPEemyNJeBPf32Tg" entityName="startMemTest">
+      <parameters__OperationSignature parameterName="inputArray">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_1IBokEBPEemyNJeBPf32Tg" entityName="IMemory">
+    <signatures__OperationInterface id="_65i7QEBPEemyNJeBPf32Tg" entityName="writeMemory">
+      <parameters__OperationSignature parameterName="i">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <parameters__OperationSignature parameterName="inputArray">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+  <interfaces__Repository xsi:type="repository:OperationInterface" id="_XBmbgEGXEemSWdnfYWhqIw" entityName="ICache">
+    <signatures__OperationInterface id="_Yc_bcEGXEemSWdnfYWhqIw" entityName="writeCache">
+      <parameters__OperationSignature parameterName="inputArray">
+        <dataType__Parameter xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+      </parameters__OperationSignature>
+      <returnType__OperationSignature xsi:type="repository:PrimitiveDataType" href="pathmap://PCM_MODELS/PrimitiveTypes.repository#//@dataTypes__Repository.0"/>
+    </signatures__OperationInterface>
+  </interfaces__Repository>
+</repository:Repository>
