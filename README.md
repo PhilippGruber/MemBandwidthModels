@@ -10,6 +10,7 @@ As a bonus, the memtest model to simulate the Memtest in Palladio
 Structure of the model name:
 
 Matrix**z**Threads**y**CMNw**x**
+
 z = [24,80] machine
 
 y = [2..16] cores
