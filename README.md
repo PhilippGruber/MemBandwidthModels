@@ -9,10 +9,12 @@ As a bonus, the memtest model to simulate the Memtest in Palladio
 
 Structure of the model name:
 
-Matrix_**z**_Threads_**y**_CMNw_**x**_
+Matrix_z_Threads_y_CMNw_x_
 
 z = [24,80] machine
+
 y = [2..16] cores
+
 z = [ε,L1,L2,All]
 
 z specifies the grade of memory behavior modeling
